@@ -35,7 +35,7 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${springdoc.version}</version>
-            <exclusions>
+            <!--<exclusions>
                 <exclusion>
                     <groupId>org.webjars</groupId>
                     <artifactId>swagger-ui</artifactId>
@@ -44,7 +44,7 @@
                     <groupId>org.webjars</groupId>
                     <artifactId>webjars-locator-core</artifactId>
                 </exclusion>
-            </exclusions>
+            </exclusions>-->
         </dependency>
         <dependency>
             <groupId>org.springdoc</groupId>

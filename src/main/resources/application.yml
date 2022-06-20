@@ -9,12 +9,21 @@ spring:
   application:
     name: projectbasic
   datasource:
-    url: jdbc:h2:~/projectbasic.db
+    url: jdbc:h2:~/${spring.application.name}.db
     username: sa
     password:
   jpa:
     hibernate:
       ddl-auto: update
 
-springdoc:
-  show-actuator: true
+app:
+  openapi:
+    info:
+      title: ${spring.application.name}
+      description: ${spring.application.name}
+    components:
+      securitySchemes:
+        admin:
+          type: APIKEY
+          name: Authorization
+          in: HEADER
