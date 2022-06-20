@@ -1,6 +1,10 @@
 server:
   port: 6060
 
+management:
+  server:
+    port: 6061
+
 spring:
   application:
     name: projectbasic
