@@ -1,0 +1,16 @@
+server:
+  port: 6060
+
+spring:
+  application:
+    name: projectbasic
+  datasource:
+    url: jdbc:h2:~/projectbasic.db
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  show-actuator: true
