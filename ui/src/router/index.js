@@ -54,7 +54,7 @@ export const constantRoutes = [
       meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
     }]
   },
-  
+
   {
     path: '/profile',
     component: Layout,
@@ -66,6 +66,27 @@ export const constantRoutes = [
         component: () => import('@/views/profile/index'),
         name: 'Profile',
         meta: { title: 'Profile', icon: 'user', noCache: true }
+      }
+    ]
+  },
+
+  {
+    path: '/redirect',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '/redirect/:path(.*)',
+        component: {
+          created() {
+            const { params, query } = this.$route
+            const { path } = params
+            this.$router.replace({ path: '/' + path, query })
+          },
+          render: function(h) {
+            return h() // avoid warning message
+          }
+        }
       }
     ]
   }

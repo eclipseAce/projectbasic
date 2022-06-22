@@ -1,4 +1,6 @@
 server:
+  compression:
+    enabled: true
   port: 6060
 
 management:
